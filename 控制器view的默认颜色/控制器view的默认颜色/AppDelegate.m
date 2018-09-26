@@ -7,7 +7,7 @@
 //
 
 /**
- 这个Demo没有storyboard文件，要在项目的TARGETS中的General中的Deployment Info中的Main Interface后面填空，代表不用storyboard文件。
+ 这个Demo无storyboard文件，要在项目的TARGETS中的General中的Deployment Info中的Main Interface后面填空，代表不用storyboard文件。
  */
 #import "AppDelegate.h"
 #import "ViewController.h"
@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //1、创建程序的窗口：
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor redColor];
     
@@ -37,7 +38,10 @@
 //    vc.view.backgroundColor = [UIColor yellowColor];
 //    vc.view.alpha = 0;
     
+    //2、设置窗口的根视图控制器：
     self.window.rootViewController = vc;
+    
+    //3、设置window为主窗口并可见:
     [self.window makeKeyAndVisible];
     
     return YES;
